@@ -15,7 +15,7 @@ public class Test {
 
 
         //map集合的key不能重复,出现多个相同的key时值会被覆盖,相当于是修改了值,value可以重复
-        map.put(3,"again");
+        map.put(3,"again"); //修改了key为3的值
         map.put(4,"Hello");
 
         //删除元素    remove
@@ -24,7 +24,7 @@ public class Test {
 
 //        map.put(10,null);
 //        map.put(null,null);
-        System.out.println(map.size());//集合大小size 即使是null也算一个尺寸，不过和key的值无关
+        System.out.println(map.size());//集合大小size 即使是null也算一个尺寸，和key的值无关
 
 
         //values方法 获取map集合中所有的value

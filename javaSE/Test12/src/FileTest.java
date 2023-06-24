@@ -1,5 +1,8 @@
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 public class FileTest {
     public static void main(String[] args) throws IOException {
@@ -10,15 +13,18 @@ public class FileTest {
         //相对路径:不带有盘符,是相对的一个文件夹或文件
 
         //绝对路径创建File对象
-        File file1 = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12\\test01.txt");
+//        File file1 = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12\\test01.txt");
+        File file1 = new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test12/test01.txt");
         System.out.println("file1 = " + file1);
 
         //父目录加子文件创建File对象
-        File file2 = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12", "test02.txt");
+//        File file2 = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12", "test02.txt");
+        File file2 = new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test12", "test02.txt");
         System.out.println("file2 = " + file2);
 
         //父File类加子文件创建File对象
-        File parent = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12");
+//        File parent = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12");
+        File parent = new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test12");
         File file3 = new File(parent, "test03.txt");
         System.out.println("file3 = " + file3);
 
@@ -30,12 +36,14 @@ public class FileTest {
 
 
         //mkdir创建一级目录,不能创建多级目录
-        File dir = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12\\dir");
+//        File dir = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12\\dir");
+        File dir = new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test12/dir");
         boolean mkdir = dir.mkdir();
         System.out.println("mkdir = " + mkdir);
 
         //mkdirs创建多级目录
-        File dirs = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12\\a\\b\\c");
+//        File dirs = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12\\a\\b\\c");
+        File dirs = new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test12/a/b/c");
         boolean mkdirs = dirs.mkdirs();
         System.out.println("mkdirs = " + mkdirs);
 
@@ -63,7 +71,8 @@ public class FileTest {
         System.out.println();
 
         //exists判断一个文件或文件夹是否存在
-        File isExist = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12\\abcdefg");
+//        File isExist = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12\\abcdefg");
+        File isExist = new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test12/abcdefg");
         boolean exists = isExist.exists();
         System.out.println("exists = " + exists);
 
@@ -88,12 +97,15 @@ public class FileTest {
 
         //lastModified获取文件最后一次修改的时间
         long l = file1.lastModified();
-        System.out.println(l);
+        Date date = new Date(l);
+        String format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(date);
+        System.out.println(format);
 
         System.out.println();
 
         //listFiles获取指定目录下的所有File对象,返回一个File数组
-        File main = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12");
+//        File main = new File("D:\\git-repo\\Java-Learning\\javaSE\\Test12");
+        File main = new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test12");
         File[] files = main.listFiles();
         for (File file : files) {
             System.out.println(file);

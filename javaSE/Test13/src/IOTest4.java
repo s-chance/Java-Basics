@@ -11,12 +11,16 @@ public class IOTest4 {
 
         //利用转换流可以实现对文件的编码格式转换,不同的编码格式可能会出现乱码
 
-        FileInputStream fileInputStream = new FileInputStream(new File("Test13\\introduce.md"));
+//        FileInputStream fileInputStream = new FileInputStream(new File("Test13\\introduce.md"));
+//
+//        FileOutputStream fileOutputStream = new FileOutputStream(new File("Test13\\exchange.md"));
 
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("Test13\\exchange.md"));
+        FileInputStream fileInputStream = new FileInputStream(new File("javaSE/Test13/introduce.md"));
 
-        InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "UTF-8");
-        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, "GBK");
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("javaSE/Test13/exchange.md"));
+
+        InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream, "GBK");
+        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream, "UTF-8");
 
         char[] chars = new char[1024];
         int len;

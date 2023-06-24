@@ -6,9 +6,9 @@ public class Test {
 
         //泛型接口以及接口的实现类
 
-        Generic<String> gs =  new Generic();
+        Generic<String> gs =  new Generic<>();
 
-        Generic<Integer> gi = new Generic();
+        Generic<Integer> gi = new Generic<>();
 
         gs.setT("Hello");  //gs的泛型限制为String类型
         gi.setT(11);       //gi的泛型限制为Integer类型
@@ -17,16 +17,17 @@ public class Test {
         System.out.println();
         System.out.println(gi.getT());
 
-        GenericInterface<String> generic1 = new GenericImpl1();
+        GenericInterface<String> generic1 = new GenericImpl1<>();
         System.out.println(generic1.funST("Integer","integer"));
 
 
-        GenericInterface generic2 = new GenericImpl2();
-        //由于GenericImpl2中已经指定数据类型，所以测试类中不需要再指定数据类型。
+        GenericInterface<Integer> generic2 = new GenericImpl2(); //这里可以不写<Integer>，但是不推荐
+        //因为在GenericImpl2中已经指定泛型接口的数据类型，所以测试类中可以不指定数据类型。
+        //但是推荐在测试类中指定数据类型，这样更加灵活
         generic2.funT(12133); //只能用Integer类型
         System.out.println(generic2.funST(1,1));
 
-        GenericImpl1 g11 = new GenericImpl1();
+        GenericImpl1<String> g11 = new GenericImpl1<>();
         System.out.println(g11.show("aaa"));
         System.out.println(113);
         System.out.println(false);

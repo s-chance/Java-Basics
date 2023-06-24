@@ -1,6 +1,7 @@
 public interface Action {
     //接口不属于类的范畴
     //接口中的方法默认为抽象方法
+    //默认权限为public abstract
     //同样的，接口中的方法必须在使用它的类里实现
     void func1();
 

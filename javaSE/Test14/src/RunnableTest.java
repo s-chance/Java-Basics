@@ -2,7 +2,7 @@ public class RunnableTest {
     public static void main(String[] args) {
 
         RThread rThread = new RThread();
-        Thread thread = new Thread(rThread);
+        Thread thread = new Thread(rThread); //Thread类的构造器
 
         thread.start();
 

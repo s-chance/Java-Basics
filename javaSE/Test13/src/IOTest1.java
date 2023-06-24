@@ -7,10 +7,11 @@ public class IOTest1 {
         //字节流图片复制操作
 
         //先创建一个File对象用于输入
-        File file1 = new File("Test13\\1.jpg");
-
+//        File file1 = new File("Test13\\1.jpg");
+        File file1 = new File("javaSE/Test13/1.jpg");
         //再创建一个File对象用于输出
-        File file2 = new File("Test13\\target.jpg");
+//        File file2 = new File("Test13\\target.jpg");
+        File file2 = new File("javaSE/Test13/target.jpg");
 
         //获取字节输入流
         FileInputStream fileInputStream = new FileInputStream(file1);

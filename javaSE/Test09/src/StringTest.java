@@ -17,6 +17,16 @@ public class StringTest {
         boolean aa = string.equals("aa");
         System.out.println(abcd1+"  "+aa);
 
+        // 关于使用字面量以及new初始化的比较，字面量是指直接赋值的字符串
+    /*    String s1 = "abc";
+        String s2 = "abc";
+        String s3 = new String("abc");
+        String s4 = new String("abc");
+        System.out.print("字面量初始化:");
+        System.out.println(s1==s2);//true
+        System.out.print("new初始化:");
+        System.out.println(s3==s4);//false*/
+
         //lastIndexOf寻找字符串中对应字符中的最后一个字符下标，如果找不到返回-1
         int index = string.lastIndexOf("a");
         int index1 = string.lastIndexOf("m");
@@ -65,10 +75,10 @@ public class StringTest {
         System.out.println();
 
 
-        String s = string.toUpperCase();//将字母字符转换为大写
-        System.out.println(s);
-        String s1 = s.toLowerCase();//将字母字符转换为小写
-        System.out.println(s1);
+        String su = string.toUpperCase();//将字母字符转换为大写
+        System.out.println(su);
+        String sl = su.toLowerCase();//将字母字符转换为小写
+        System.out.println(sl);
 
 
         //split字符串切割，去除特定的重复出现的字符

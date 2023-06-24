@@ -14,7 +14,7 @@ public class IOTest2 {
 
         long end = System.currentTimeMillis();
 
-        System.out.println("普通字节流处理用时:"+(end-start));
+        System.out.println("普通字节流处理用时:"+(end-start)+"毫秒");
 
         long start1 = System.currentTimeMillis();
 
@@ -22,13 +22,16 @@ public class IOTest2 {
 
         long end1 = System.currentTimeMillis();
 
-        System.out.println("缓冲字节流处理用时:"+(end1-start1));
+        System.out.println("缓冲字节流处理用时:"+(end1-start1)+"毫秒");
 
     }
 
     public static void normalCopy() throws IOException {
-        File file1 = new File("Test13\\1.mp4");
-        File file2 = new File("Test13\\123.mp4");
+//        File file1 = new File("Test13\\1.mp4");
+//        File file2 = new File("Test13\\123.mp4");
+
+        File file1 = new File("javaSE/Test13/1.mp4");
+        File file2 = new File("javaSE/Test13/123.mp4");
 
         FileInputStream fileInputStream = new FileInputStream(file1);
 
@@ -48,8 +51,11 @@ public class IOTest2 {
     }
 
     public static void bufferedCopy() throws IOException {
-        File file1 = new File("Test13\\1.mp4");
-        File file2 = new File("Test13\\123.mp4");
+//        File file1 = new File("Test13\\1.mp4");
+//        File file2 = new File("Test13\\123.mp4");
+
+        File file1 = new File("javaSE/Test13/1.mp4");
+        File file2 = new File("javaSE/Test13/123.mp4");
 
         FileInputStream fileInputStream = new FileInputStream(file1);
 

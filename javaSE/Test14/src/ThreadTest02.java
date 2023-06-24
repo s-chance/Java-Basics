@@ -68,7 +68,7 @@ class MThread extends Thread {
             //yield暂时释放指定线程的执行权
             //需要注意的是yield释放的当前线程仍可能再次选中执行,即存在随机性
             if (i == 19) {
-                yield();
+                Thread.yield(); //jdk17中已经不推荐使用，且调用后不一定会释放执行权
             }
         }
     }

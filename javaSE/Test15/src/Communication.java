@@ -25,8 +25,8 @@ class CommunicationThread implements Runnable {
         while (true) {
             synchronized (this) {
 
-                //唤醒线程
-                notify();
+                //唤醒线程，但是不会立即释放同步监视器，而是等到同步代码块执行完毕才会释放
+                notify();  //这里与wait配合使用，实现线程交替执行
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -36,7 +36,7 @@ class CommunicationThread implements Runnable {
                     System.out.println(Thread.currentThread().getName()+":"+num);
                     num--;
                     try {
-                        //这边如果只用wait那么所有线程都会进入阻塞,形成变相的“死锁”
+                        //这边如果只用wait而没有使用notify那么所有线程都会进入阻塞,形成变相的“死锁”
                         wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();

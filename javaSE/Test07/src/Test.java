@@ -10,7 +10,7 @@ public class Test {
         set.add(11);
         set.add("hello");
         set.add(new User("hh",12));//重写toString
-        set.add(11);//set集合中不允许重复的元素存在
+        set.add(11);//set集合中不允许重复的元素存在，重复的元素不会被添加到集合中
 
         //set集合没有下标，因此无法用普通的for循环实现
 

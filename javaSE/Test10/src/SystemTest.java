@@ -10,7 +10,7 @@ public class SystemTest {
         String javaHome = System.getProperty("java.home");
         System.out.println("javaHome = " + javaHome);
 
-        //win操作系统版本
+        //操作系统版本
         String osVersion = System.getProperty("os.version");
         System.out.println("osVersion = " + osVersion);
 

@@ -16,7 +16,9 @@ public class TCPTest2 {
         //获取输出流
         OutputStream outputStream = socket.getOutputStream();
         //获取输入流
-        FileInputStream fileInputStream = new FileInputStream(new File("D:\\git-repo\\Java-Learning\\javaSE\\Test16\\tcp123.jpg"));
+//        FileInputStream fileInputStream = new FileInputStream(new File("D:\\git-repo\\Java-Learning\\javaSE\\Test16\\tcp123.jpg"));
+
+        FileInputStream fileInputStream = new FileInputStream(new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test16/tcp123.jpg"));
 
         //读写
         byte[] bytes = new byte[1024];
@@ -40,12 +42,15 @@ public class TCPTest2 {
         //获取输入流
         InputStream inputStream = accept.getInputStream();
         //获取输出流
-        FileOutputStream fileOutputStream = new FileOutputStream(new File("D:\\git-repo\\Java-Learning\\javaSE\\Test16\\tcp456.jpg"));
+//        FileOutputStream fileOutputStream = new FileOutputStream(new File("D:\\git-repo\\Java-Learning\\javaSE\\Test16\\tcp456.jpg"));
+
+        FileOutputStream fileOutputStream = new FileOutputStream(new File("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test16/tcp456.jpg"));
+
         //读写
         byte[] bytes = new byte[1024];
         int len;
         while ((len = inputStream.read(bytes)) != -1) {
-            fileOutputStream.write(bytes, 0, len);
+           fileOutputStream.write(bytes, 0, len);
         }
         //资源关闭
         fileOutputStream.close();

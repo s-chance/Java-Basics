@@ -40,7 +40,7 @@ public class DateTest {
         //字符串日期重构为Date
         //parse
         String str = "Fri Jun 17 19:35:23 CST 2022";
-        //带有下划线的关键字表示已经过时的方法,但还可以使用
+        //在idea的补全提示中带有删除线的关键字表示已经过时,但还可以使用
         long parse = Date.parse(str);
         System.out.println(parse);
     }

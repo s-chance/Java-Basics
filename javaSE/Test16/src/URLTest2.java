@@ -15,7 +15,7 @@ public class URLTest2 {
     //tomcat的默认地址  http://localhost:8080/
     //这边http://localhost:8080/无法访问是因为tomcat还没有启动
     //tomcat可以从官网上下载,有时候下载会比较慢,稳定的版本推荐tomcat8
-    //这边之前已经下载过tomcat,
+    //这边之前已经下载过tomcat
     //官网下载完tomcat压缩包后解压,进入tomcat文件夹bin目录下,双击startup.bat运行
     //如果出现窗口一闪消失的现象,则可能是jdk环境变量的问题,tomcat需要依靠jdk来运行
     //运行成功后再访问http://localhost:8080/即可看到tomcat的默认页面
@@ -36,7 +36,9 @@ public class URLTest2 {
         //获取输入流
         InputStream inputStream = urlConnection.getInputStream();
         //保存到本地
-        FileOutputStream fileOutputStream = new FileOutputStream("D:\\git-repo\\Java-Learning\\javaSE\\Test16\\url.jpg");
+//        FileOutputStream fileOutputStream = new FileOutputStream("D:\\git-repo\\Java-Learning\\javaSE\\Test16\\url.jpg");
+
+        FileOutputStream fileOutputStream = new FileOutputStream("/home/entropy/IdeaProjects/Java-Basics/javaSE/Test16/download.jpg");
         byte[] bytes = new byte[1024];
         int len;
         while ((len = inputStream.read(bytes)) != -1) {

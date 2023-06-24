@@ -58,8 +58,7 @@ public class ReflectionTest {
         Method showNation = personClass.getDeclaredMethod("showNation", String.class);
         showNation.setAccessible(true);
         //invoke:调用
-        Object invoke = showNation.invoke(jerry, "China");
-        System.out.println(invoke);
+        showNation.invoke(jerry, "China");
 
         //反射具有动态性
     }

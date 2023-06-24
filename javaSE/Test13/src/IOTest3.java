@@ -4,8 +4,11 @@ public class IOTest3 {
     public static void main(String[] args) throws IOException {
         //IO流换行问题
 
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("Test13\\clone.md")));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("Test13\\clone2.md")));
+//        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("Test13\\clone.md")));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("Test13\\clone2.md")));
+
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(new File("javaSE/Test13/clone.md")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("javaSE/Test13/clone2.md")));
 
         char[] chars = new char[2];
 

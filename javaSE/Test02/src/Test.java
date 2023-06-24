@@ -22,6 +22,10 @@ public class Test extends Object {
         h.feed(d);
         h.feed(c);
 
+        // 向下转型的前提是必须先向上转型，否则父类无法指向子类
+        Pet p = new Pet(); // 该父类没有指向任何子类
+        h.feed(p); // 该父类在feed方法中无法转换为子类，因此无法调用子类的方法
+
 //        for(int i=0;i<3;i++) {
 //            Scanner sc = new Scanner(System.in);
 //            int a = sc.nextInt();

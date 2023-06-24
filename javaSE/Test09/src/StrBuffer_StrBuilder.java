@@ -1,8 +1,15 @@
-public class StrsTest {
+public class StrBuffer_StrBuilder {
 
     public static void main(String[] args) {
         //已知String本身是final修饰的类，本身不可变
+        String origin = "abc";
+        String copy = origin;
+        origin = "def";
+        System.out.println(origin);
+        System.out.println(copy); //copy的值并没有因为origin的改变而改变
+
         //于是Java这边提供了可变的StringBuilder和StringBuffer
+        //为什么可变？ 因为StringBuffer和StringBuilder内部维护了一个char数组
         StringBuilder stringBuilder = new StringBuilder("abc");
 
         //拼接append
@@ -13,7 +20,7 @@ public class StrsTest {
         //与String不同StringBuilder在拼接之后其第一个实例本身已经改变
 
         //删除delete
-        stringBuilder.delete(2,3);//0a1b2c3a4a -> 0a1b2 3a4a
+        stringBuilder.delete(2,3);//0a1b2c3a4a -> 0a1b2 3a4a 这里的数字是下标
         System.out.println(stringBuilder);
 
         //insert指定在某一个下标开始插入数字

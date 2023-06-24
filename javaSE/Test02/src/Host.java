@@ -8,7 +8,9 @@ public class Host {
         } else if(p instanceof Cat) {
             Cat cat = (Cat)p;
             cat.cf(20);
+        } else {
+            System.out.println("error");
         }
-        //通过这种方式就可以调用子类的特有的方法,可以减少代码量,不过注意使用instanceof来保证转换的安全性
+        //通过这种方式，即向下转型，就可以调用子类的特有的方法,可以减少代码量,不过注意使用instanceof来保证转换的安全性
     }
 }

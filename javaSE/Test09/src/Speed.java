@@ -38,7 +38,7 @@ public class Speed {
 
         System.out.println("StringBuilder用时:"+(l5-l4)+"毫秒");
 
-
+//        单次测试结果：
 //        String用时:8232毫秒
 //        StringBuffer用时:16毫秒
 //        StringBuilder用时:4毫秒

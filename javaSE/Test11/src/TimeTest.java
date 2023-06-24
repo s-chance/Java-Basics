@@ -7,14 +7,18 @@ public class TimeTest {
     public static void main(String[] args) {
         //解析
         //DateTimeFormatter设置格式并格式化
-        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
+        DateTimeFormatter pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
         //格式化得到日期字符串
         String format = pattern.format(LocalDateTime.now());
         System.out.println(format);
         //TemporalAccessor解析字符串为LocalDateTime对象
+        //在使用LocalTime时，需要注意12小时制和24小时制的区别
+        //12小时制：hh:mm:ss a 24小时制：HH:mm:ss
+        //12小时制和24小时制可能会导致 LocalDateTime 和 LocalTime 解析失败
         TemporalAccessor parse = pattern.parse(format);
-        System.out.println(parse);
+        LocalDateTime localDateTime = LocalDateTime.from(parse);
+        System.out.println(localDateTime);
         System.out.println();
         //计算时间间隔
         //Period.between计算LocalDate

@@ -9,7 +9,7 @@ public class Test01 extends Object {
     //@Deprecated 表示某个元素(类、方法等)已过时
     //@SuppressWarnings 用于抑制编译器产生警告信息
 
-    //使用idea快捷键重写方法的时候会出现,不加也不会报错,但为了代码规范还是写上,但idea会自动生成
+    //使用idea快捷键重写方法的时候会自动生成@Override,不加也不会报错,但为了代码规范还是以idea自动生成的为准
     @Override
     public String toString() {
         return super.toString();
