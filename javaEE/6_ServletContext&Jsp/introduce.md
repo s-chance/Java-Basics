@@ -4,15 +4,16 @@
 ServletContext域对象是Servlet规范中4个域对象之一,拥有web应用中最大的作用域,也叫application域,能实现整个应用之间的数据共享。  
 生命周期:应用加载时创建,应用停止时销毁
 #### 使用
-1. 获取servletContext对象[示例](src/com/entropy/test/ServletContextTest.java)
+1. 获取servletContext对象 
+   [示例](src/com/entropy/test/ServletContextTest.java)
 2. 获取MIME类型(如image/jpeg、audio/mpeg、video/mp4)  
-   MIME类型:在互联网通信过程中定义的一种文件数据类型  
+   MIME类型:在互联网通信过程中定义的一种文件数据类型
    [示例](src/com/entropy/test/MIMETest.java)
 3. 共享数据  
    一端存储数据[示例](src/com/entropy/test/DataSaveTest.java)、一端获取数据[示例](src/com/entropy/test/DataShareTest.java)  
    注意:由于servletContext生命周期比较长,使用servletContext存储大量数据会对服务器造成不小的内存压力  
    删除数据[示例](src/com/entropy/test/DataCleanTest.java)
-4. 获取文件真实路径(服务器路径)  
+4. 获取文件真实路径(服务器路径)
    [示例](src/com/entropy/test/PathInfo.java)  
 #### 实现网页文件下载  
 路径和文件名不能包含空格和特殊字符  
@@ -55,11 +56,11 @@ pageContext本身也是一个域对象,但它能够操作其它3个域对象中�
 生命周期:随jsp的创建而创建,随jsp的销毁而销毁。每一个jsp页面都有一个独立的pageContext
 ##### 四大域对象
 
-| 域对象名称     | 范围     | 级别                     | 备注                                     |
-| :--------------: | :--------: | :------------------------: | :----------------------------------------: |
-| PageContext    | 页面范围 | 最小只能在当前页面用   | 因范围太小，开发中用的很少               |
-| ServletRequest | 请求范围 | 一次请求或当期请求转发用 | 当请求转发之后，再次转发时请求域丢失     |
-| HttpSession    | 会话范围 | 多次请求数据共享时使用   | 多次请求共享数据，但不同的客户端不能共享 |
+| 域对象名称     | 范围     |      级别      | 备注                                     |
+| :--------------: | :--------: |:------------:| :----------------------------------------: |
+| PageContext    | 页面范围 |  最小只能在当前页面用  | 因范围太小，开发中用的很少               |
+| ServletRequest | 请求范围 | 一次请求或当前请求转发用 | 当请求转发之后，再次转发时请求域丢失     |
+| HttpSession    | 会话范围 | 多次请求数据共享时使用  | 多次请求共享数据，但不同的客户端不能共享 |
 | ServletContext | 应用范围 | 最大，整个应用都可以使用 | 尽量少用，如果对数据有修改需要做同步处理 |
 
 ### MVC设计范式

@@ -68,7 +68,7 @@
   由于Session需要依赖Cookie来实现功能(可以用其它技术手段来代替cookie,不过一般情况下都是用的cookie),  
   因此持久化可以通过修改JSESSIONID这个用于标识Session的特殊的Cookie的存活时间来实现
 2. 客户端保持开启,服务端关闭  
-  默认情况下,客户端获取的是新的session,但由于关闭是服务端,为了保护用户的数据,一般开发中都会开启持久化  
+  默认情况下,客户端获取的是新的session,但由于关闭的是服务端,为了保护用户的数据,一般开发中都会开启持久化  
   关于服务端的session持久化(HttpSession的钝化和活化)  
   HttpSession钝化:在服务器正常关闭之前,将Session对象序列化到硬盘上  
   HttpSession活化:在服务器启动之后,将Session文件转化为内存中的Session对象

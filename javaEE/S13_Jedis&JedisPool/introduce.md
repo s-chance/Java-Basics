@@ -1,6 +1,6 @@
 ### Jedis
 #### 概念
-jedis是一款java操作redis数据库的工具, 关于redis的下载和redis的基本使用可以访问[相关文章](https://s-chance.github.io/2022/09/14/Redis%E5%9F%BA%E7%A1%80/#more)  
+jedis是一款java操作redis数据库的工具, 关于redis的下载和redis的基本使用可以访问[相关文章](https://s-chance.github.io/2022/09/14/Redis-Base/)  
 #### 简单使用
 注意: 请在下载完redis后并确保redis服务器已经启动的情况下, 执行代码进行测试  
 redis默认端口号: 6379

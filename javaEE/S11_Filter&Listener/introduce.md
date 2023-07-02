@@ -27,7 +27,7 @@ destroy:服务器正常关闭,Filter对象销毁,调用destroy方法释放资源
 [拦截对index.jsp的特定方式的访问请求](src/com/entropy/web/filter/FilterIndex.java)(这里写了三种情况)  
 [拦截多级目录下的所有内容](src/com/entropy/web/filter/FilterServletDemo.java)  
 servlet程序:  
-多级目录拦截测试用例:[demo1](src/com/entropy/web/servlet/ServletDemo1.java)、[demo2](src/com/entropy/web/servlet/ServletDemo1.java)  
+多级目录拦截测试用例:[demo1](src/com/entropy/web/servlet/ServletDemo1.java)、[demo2](src/com/entropy/web/servlet/ServletDemo2.java)  
 转发访问用例:[forward](src/com/entropy/web/servlet/ServletForward.java)  
 
 ##### 多个过滤器先后执行顺序  

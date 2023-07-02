@@ -68,8 +68,8 @@
 >
 > [示例](src/com/entropy/test/response/ResponseChar.java)
 #### 服务器输出字节数据到浏览器
-> [示例](src/com/entropy/test/response/ResponseByte.java)
+[示例](src/com/entropy/test/response/ResponseByte.java)
 #### 网页验证码制作
 示例:[前端](web/verify.html)、[后端](src/com/entropy/test/VerificationCode.java)  
 模板素材:[工具类](src/com/entropy/util/IdentifyCode.java)、[使用示例](src/com/entropy/util/IdentifyDemo.java)  
-模板素材来源于网络,如有侵权请联系[s-chance](https://github.com/s-chance) 删除
+模板素材来源于网络,如有侵权请联系[s-chance](https://github.com/s-chance)删除
