@@ -34,7 +34,7 @@ public class RequestLineTest extends HttpServlet {
         System.out.println("Http协议版本:"+protocol);
         //getRemoteAddr()获取客户机的IP地址
         String remoteAddr = req.getRemoteAddr();
-        System.out.println("客户机的IP地址"+remoteAddr);
+        System.out.println("客户机的IP地址:"+remoteAddr);
     }
 
     @Override

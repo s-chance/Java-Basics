@@ -11,11 +11,15 @@ import java.io.IOException;
 public class HServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String name = req.getParameter("name");
+        System.out.println("name = " + name);
         System.out.println("收到Get请求");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String name = req.getParameter("name");
+        System.out.println("name = " + name);
         System.out.println("收到Post请求");
     }
 }

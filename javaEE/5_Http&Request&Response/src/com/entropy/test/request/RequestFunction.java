@@ -36,10 +36,9 @@ public class RequestFunction extends HttpServlet {
         //getParameterNames()获取所有请求的参数名称
         Enumeration<String> parameterNames = req.getParameterNames();
         while (parameterNames.hasMoreElements()) {
-            String element = parameterNames.nextElement();
-            System.out.println(element);
-            String parameter = req.getParameter(element);
-            System.out.println(parameter);
+            String element = parameterNames.nextElement(); //参数名
+            String parameter = req.getParameter(element); //参数值
+            System.out.println(element+":"+parameter);
         }
         System.out.println();
         //getParameterMap()获取所有参数的map集合

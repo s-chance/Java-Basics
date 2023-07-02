@@ -16,6 +16,7 @@ public class ServletTest implements Servlet {
     //ServletConfig:Servlet的配置对象
     @Override
     public ServletConfig getServletConfig() {
+        System.out.println("读取config配置");
         return null;
     }
 
@@ -29,6 +30,7 @@ public class ServletTest implements Servlet {
     //获取Servlet的一些信息、版本、作者等等...
     @Override
     public String getServletInfo() {
+        System.out.println("获取Servlet信息");
         return null;
     }
 
